@@ -20,15 +20,15 @@ const styles = {
    },
    inputText: {
       marginBottom: 20,
-      width: 400,
+      width: 350,
       readOnly: true,
    },
    submitButton: {
-      marginTop: 50,
+      marginTop: 30,
    },
    container: {
-       width: 500,
-       height: 300,
+       width: 400,
+       height: 250,
        backgroundColor: '#fafafa',
    },
    cardHeader: {
@@ -120,7 +120,7 @@ class Login extends Component {
 
                     <div className={classes.submitDiv}>
                      <Button variant="contained" onClick={this.onSubmit.bind(this)} color="primary" className={classes.submitButton}>Login</Button>
-                     <Button variant="contained" onClick={this.onReset.bind(this)} color="success" className={classes.submitButton}>Reset</Button>
+                     <Button variant="contained" onClick={this.onReset.bind(this)} color="secondary" className={classes.submitButton}>Reset</Button>
                     </div>
                 </form>
                 <label>{message}</label>

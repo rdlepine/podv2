@@ -18,24 +18,6 @@ const styles = theme => ({
   root: {
     display: 'flex',
   },
-  appBar: {
-    transition: theme.transitions.create(['margin', 'width'], {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
-  },
-  appBarShift: {
-    width: `calc(100% - ${drawerWidth}px)`,
-    marginLeft: drawerWidth,
-    transition: theme.transitions.create(['margin', 'width'], {
-      easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-  },
-  menuButton: {
-    marginLeft: 12,
-    marginRight: 20,
-  },
   hide: {
     display: 'none',
   },
@@ -94,7 +76,7 @@ class DrawerMenu extends Component {
             </div>
             <Divider />
             <List>
-              {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+              {['Dispatch', 'Track', 'Send email', 'Drafts'].map((text, index) => (
                 <ListItem button key={text}>
                   <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
                   <ListItemText primary={text} />

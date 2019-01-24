@@ -24,6 +24,7 @@ const styles = theme => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
+    backgroundImage: 'linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%)',
   },
   appBarShift: {
     width: `calc(100% - ${drawerWidth}px)`,
@@ -56,6 +57,9 @@ const styles = theme => ({
     }),
     marginLeft: 0,
   },
+  companyTitle: {
+    marginLeft: 40,
+  }
 });
 
 class PersistentDrawerLeft extends React.Component {
@@ -91,16 +95,24 @@ class PersistentDrawerLeft extends React.Component {
           })}
         >
           <Toolbar disableGutters={!open}>
-            <IconButton
-              color="inherit"
-              aria-label="Open drawer"
-              onClick={this.handleDrawerOpen}
-              className={classNames(classes.menuButton, open && classes.hide)}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Typography variant="h6" color="inherit" noWrap>
-              Persistent drawer
+
+              {
+                isLoggedIn?
+                <IconButton
+                  color="inherit"
+                  aria-label="Open drawer"
+                  onClick={this.handleDrawerOpen}
+                  className={classNames(classes.menuButton, open && classes.hide)}
+                >
+                  <MenuIcon />
+                </IconButton>
+                :
+                ''
+              }
+            <Typography variant="h6" color="inherit" noWrap >
+              <span className={classes.companyTitle}>
+                    POD Dispatch
+              </span>
             </Typography>
           </Toolbar>
         </AppBar>
