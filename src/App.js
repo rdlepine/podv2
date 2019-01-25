@@ -5,6 +5,7 @@ import { withStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { Switch, Route, Link } from "react-router-dom";
 import DispatchList from './components/dispatch/DispatchList'
+import EmployeeList from './components/employees/EmployeeList'
 import RouteList from './components/routes/RouteList'
 import Login from './components/security/Login'
 import DrawerMenu from './components/layout/DrawerMenu'
@@ -76,6 +77,7 @@ class PersistentDrawerLeft extends React.Component {
                 <Route exact path='/' component={DispatchList}/>
                 <Route exact path='/dispatch' component={DispatchList}/>
                 <Route exact path='/routes' component={RouteList}/>
+                <Route exact path='/employees' component={EmployeeList}/>
               </Switch>
               :
               <Login logIn={this.logIn.bind(this)}/>
