@@ -6,7 +6,7 @@ const styles = {
       flexGrow: 1,
     },
     container: {
-        marginTop: 75,
+        marginTop: 0,
     }
 }
 
@@ -21,9 +21,8 @@ class DispatchList extends Component {
         const {classes} = this.props
         
         return (
-            <div className={classes.container}>
+            <div>
                 <h1 className={classes.container}>DispatchList Here</h1>
-             
             </div>
         )
 
