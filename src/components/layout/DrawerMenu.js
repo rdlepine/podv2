@@ -11,6 +11,7 @@ import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import { withStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
+import { Link } from 'react-router-dom'
 
 const drawerWidth = 240;
 
@@ -92,6 +93,13 @@ class DrawerMenu extends Component {
                 </ListItem>
               ))}
             </List>
+            <List>
+                <Link to="/routes">
+                  <ListItem button>
+                      <ListItemText primary='Routes'  />
+                  </ListItem>
+                </Link>
+             </List>
           </Drawer>
         )
     }
