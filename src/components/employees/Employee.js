@@ -1,15 +1,16 @@
 import React,  {Component} from 'react'
 import {Button, TextField, Card, CardHeader, CardContent, Avatar, InputAdornment} from '@material-ui/core';
 import {Lock, PersonOutline, LockOpen} from '@material-ui/icons'
-import Ron from '../../images/ron.jpg'
+import {Link} from 'react-router-dom'
+import Ron from '../../images/pat.jpg'
 import { withStyles } from '@material-ui/core/styles';
 
 const styles = {
    root: {
       display: 'flex',          
       flexDirection: 'column',
-      alignItems: 'center',
-      marginTop: 175,
+//      alignItems: 'center',
+      marginTop: 50,
       height: '100vh',
       width: '100%',
       borderBottom: '2px solid gray',
@@ -28,9 +29,10 @@ const styles = {
       marginTop: 30,
    },
    container: {
-       width: 650,
-       height: 350,
+       width: 850,
+       height: 450,
        backgroundColor: '#fafafa',
+      
    },
    cardHeader: {
     height: 60,
@@ -60,7 +62,7 @@ const styles = {
         alignItems: 'center',
     },
     submitDiv: {
-       width: '75%',
+       width: '100%',
        display: 'flex',
        justifyContent: 'space-between',
     }, 
@@ -72,6 +74,9 @@ const styles = {
         margin: 40,
         width: 200,
         height: 200,
+    },
+    links: {
+        textDecoration: 'none',
     }
  }
 
@@ -104,7 +109,7 @@ class Employee extends Component {
       return (
          <div className={classes.root}>
             <Card className={classes.container}>
-               <CardHeader title="Employee Maintenace" className={classes.cardHeader}
+               <CardHeader title="Employee" className={classes.cardHeader}
                 classes={{
                     title: classes.title,
                 }}
@@ -115,7 +120,7 @@ class Employee extends Component {
                />
                <CardContent>
                 <div className={classes.cardContent}>
-                    <img src={Ron} alt="blah" className={classes.employeeImg} />
+                    <Avatar src={Ron} alt="blah" className={classes.employeeImg} />
                     <form className={classes.contentMargin}>
                     
                         <TextField className={classes.inputText}
@@ -140,8 +145,11 @@ class Employee extends Component {
                         }}/>
 
                         <div className={classes.submitDiv}>
-                        <Button variant="contained" onClick={this.onSubmit.bind(this)} color="primary" className={classes.submitButton}>Submit</Button>
-                        <Button variant="contained" onClick={this.onReset.bind(this)} color="secondary" className={classes.submitButton}>Reset</Button>
+                            <Button variant="contained" onClick={this.onSubmit.bind(this)} color="primary" className={classes.submitButton}>Submit</Button>
+                            <Button variant="contained" onClick={this.onReset.bind(this)} color="secondary" className={classes.submitButton}>Reset</Button>
+                            <Link to="/employees" className={classes.links}>
+                                <Button variant="contained" onClick={this.onReset.bind(this)} color="default" className={classes.submitButton}>Return</Button>
+                            </Link>
                         </div>
                     </form>
                 </div>
