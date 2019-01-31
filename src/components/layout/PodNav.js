@@ -13,10 +13,7 @@ const styles = theme => ({
       display: 'flex',
     },
     appBar: {
-      transition: theme.transitions.create(['margin', 'width'], {
-        easing: theme.transitions.easing.sharp,
-        duration: theme.transitions.duration.leavingScreen,
-      }),
+      zIndex: theme.zIndex.drawer + 1,
       backgroundImage: 'linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%)',
     },
     appBarShift: {

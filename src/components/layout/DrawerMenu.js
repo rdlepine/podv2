@@ -72,7 +72,7 @@ class DrawerMenu extends Component {
         return (
             <Drawer
               className={classes.drawer}
-              variant="persistent"
+              variant="permanent"
               anchor="left"
               open={open}
               classes={{
