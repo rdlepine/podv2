@@ -46,9 +46,7 @@ class PodNav extends Component {
                 <CssBaseline />
                 <AppBar
                     position="fixed"
-                    className={classNames(classes.appBar, {
-                        [classes.appBarShift]: open,
-                    })}
+                    className={classNames(classes.appBar, )}
                 >
                     <Toolbar disableGutters={!open}>
 
